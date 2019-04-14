@@ -1,6 +1,9 @@
 package model;
 
-public class Contacts {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Contacts{
 
     private String name;
     private String phoneNo;
@@ -30,6 +33,6 @@ public class Contacts {
     public void setImage(int imageId) {
         this.image = imageId;
     }
+
+
 }
-
-
