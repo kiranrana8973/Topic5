@@ -15,16 +15,13 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import model.Contacts;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder> {
-
     Context mContext;
     List<Contacts> contactsList;
-    // Constructor , to receive data from the activity
-
+    // Constructor
     public ContactsAdapter(Context mContext, List<Contacts> contactsList) {
         this.mContext = mContext;
         this.contactsList = contactsList;
     }
-
     @NonNull
     @Override
     public ContactsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
