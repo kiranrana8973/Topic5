@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.topic5.DetailsActivity;
 import com.example.topic5.R;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -41,14 +42,16 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
         contactsViewHolder.tvName.setText(contacts.getName());
         contactsViewHolder.tvPhone.setText(contacts.getPhoneNo());
 
-        //Adding click listener in imageview
+        //Adding click listener in an imageview
         contactsViewHolder.imgProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, DetailsActivity.class);
-             //   intent.putExtra("name",contacts.getName());
-                intent.putExtra("phone",contacts.getPhoneNo());
+
                 intent.putExtra("image",contacts.getImage());
+                intent.putExtra("name",contacts.getName());
+                intent.putExtra("phone",contacts.getPhoneNo());
+
                 mContext.startActivity(intent);
             }
         });

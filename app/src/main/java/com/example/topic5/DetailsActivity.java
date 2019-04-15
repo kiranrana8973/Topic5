@@ -15,7 +15,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class DetailsActivity extends AppCompatActivity {
 
     CircleImageView circImg;
-    TextView tvFullName,tvPhoneNo;
+    TextView tvFullName, tvPhoneNo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,20 +26,16 @@ public class DetailsActivity extends AppCompatActivity {
         tvFullName = findViewById(R.id.tvFullName);
         tvPhoneNo = findViewById(R.id.tvPhoneNo);
 
-        Bundle bundle=getIntent().getExtras();
+        Bundle bundle = getIntent().getExtras();
 
-        if(bundle!=null)
-        {
-
-            String path = "R.drawable." + bundle.getString("image");
-          //  String imageName = bundle.getString("image");
-
-//            int imageResource = getResources().getIdentifier("drawable/" + imageName, null, getPackageName());
-//            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), imageResource);
-//            circImg.setImageBitmap(bitmap);
+        if (bundle != null) {
+            circImg.setImageResource(bundle.getInt("image"));
             tvFullName.setText(bundle.getString("name"));
             tvPhoneNo.setText(bundle.getString("phone"));
         }
 
     }
 }
+
+
+
