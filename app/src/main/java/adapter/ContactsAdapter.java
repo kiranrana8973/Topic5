@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.topic5.DetailsActivity;
 import com.example.topic5.R;
-
-import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 import model.Contacts;
@@ -47,7 +44,6 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, DetailsActivity.class);
-
                 intent.putExtra("image",contacts.getImage());
                 intent.putExtra("name",contacts.getName());
                 intent.putExtra("phone",contacts.getPhoneNo());

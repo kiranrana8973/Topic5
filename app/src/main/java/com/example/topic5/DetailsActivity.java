@@ -33,9 +33,5 @@ public class DetailsActivity extends AppCompatActivity {
             tvFullName.setText(bundle.getString("name"));
             tvPhoneNo.setText(bundle.getString("phone"));
         }
-
     }
 }
-
-
-
